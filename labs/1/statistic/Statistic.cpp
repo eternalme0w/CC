@@ -1,7 +1,20 @@
 #include "Statistic.h"
-#include <vector>
-#include <algorithm>
 
+const int Statistic::operator[](const size_t ind) const {
+
+	if (ind < 0 || ind > sales.size() - 1)
+		throw std::exception();
+	else 
+		return sales[ind];
+}
+
+int& Statistic::operator[](const size_t ind) {
+
+	if (ind < 0 || ind > sales.size() - 1)
+		throw std::exception();
+	else
+		return sales[ind];
+}
 
 Statistic::Statistic(const std::vector<int>& a): sales(a) {}
 
@@ -15,17 +28,24 @@ Statistic::Statistic(Statistic const &statistic) {
 	sales = statistic.sales;
 }
 
-Statistic &operator=(Statistic const &statistic) {
+Statistic& Statistic::operator=(const Statistic& statistic)  {
 
 	sales = statistic.sales;
 	return *this;
 }
 
-Statistic(std::string const &str) {
+Statistic::Statistic(const std::string &str) {
 
-	size_t i = 0;
-	while(str[i] != '\0') 
-		sales.push_back(static_cast<int>(str[i++]));
+	static const std::regex rdelim{" "};
+	std::vector<std::string> words{
+		std::sregex_token_iterator(str.begin(), str.end(), rdelim, -1),
+		std::sregex_token_iterator()
+	};
+
+	for (const auto &x : words) {
+		
+		sales.push_back(stoi(x));
+	}
 }
 
 long long Statistic::sum_sales() const {
@@ -75,7 +95,7 @@ std::vector<int> Statistic::max_sales() const {
 
 	for (int i = 0; i < sales.size(); ++i) {
 
-		if (sales[i] == max) max_sales.push_back(i + 1);
+		if (sales[i] == max) max_sales.push_back(i);
 	}
 
 	return max_sales;
@@ -88,7 +108,7 @@ std::vector<int> Statistic::min_sales() const {
 
 	for (int i = 0; i < sales.size(); ++i) {
 
-		if (sales[i] == min) min_sales.push_back(i+1);
+		if (sales[i] == min) min_sales.push_back(i);
 	}
 
 	return min_sales;

@@ -14,6 +14,13 @@ public:
 
 	Radio();
 	Radio(const Radio&);
+	Radio& operator=(const Radio&);
+
+	Radio &operator++();
+	Radio operator++(int);
+
+	Radio &operator--();
+	Radio operator--(int);
 
 	unsigned int getStation() const;
 	unsigned int getVolume() const;

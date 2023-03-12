@@ -11,7 +11,42 @@ Radio::Radio(const Radio& R) {
 
 	volume = R.volume;
 	station = R.station;
+}
 
+Radio& Radio::operator=(const Radio& R) {
+
+	volume = R.volume;
+	station = R.station;
+
+	return *this;
+}
+
+Radio& Radio::operator++() {
+
+	nextStation();
+	return *this;
+}
+
+Radio Radio::operator++(int) {
+
+	Radio copy = *this;
+	nextStation();
+	return copy;
+}
+
+Radio &Radio::operator--()
+{
+
+	previousStation();
+	return *this;
+}
+
+Radio Radio::operator--(int)
+{
+
+	Radio copy = *this;
+	previousStation();
+	return copy;
 }
 
 unsigned int Radio::getStation() const {
@@ -46,14 +81,16 @@ void Radio::decVolume() {
 
 }
 
+
 void Radio::nextStation() {
 
-	setStation(station + 1);
-
+	if (station == MAX_STATION) setStation(MIN_STATION);
+	else setStation(station + 1);
+	
 }
 
 void Radio::previousStation() {
-
-	setStation(station - 1);
-
+	
+	if (station == MIN_STATION) setStation(MAX_STATION);
+	else setStation(station - 1);
 }
