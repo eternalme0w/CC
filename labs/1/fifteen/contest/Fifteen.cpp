@@ -35,17 +35,7 @@ int Fifteen::getCount() const
 void Fifteen::draw()
 {
 
-    std::vector<int> field = game_field.getField();
-    int size = game_field.getSize();
-
-    for (int i = 1; i <= game_field.num_cells; ++i)
-    {
-
-        if (i % size != 0) 
-            std::cout << field[i - 1] << " ";
-        else 
-            std::cout << field[i - 1] << "\n";
-    }
+    game_field.out();
 }
 
 void Fifteen::onKeyPressed(int const &btnCone)

@@ -113,3 +113,18 @@ std::vector<int> Statistic::min_sales() const {
 
 	return min_sales;
 }
+
+void Statistic::out() {
+
+	std::cout << "\n\n";
+
+	std::cout << "data set: ";
+
+	for (int x : sales)
+	{
+
+		std::cout << x << " ";
+	}
+
+	std::cout << "\n\n";
+}

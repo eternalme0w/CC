@@ -10,7 +10,9 @@ int main() {
 
     while(ch != 'e') {
 
-        cout << game.getCount() << "\n\n";
+        cout << "count steps: " << game.getCount() << "\n\n";
+        cout << "if you wanna exit game press 'e'"  << "\n\n";
+        cout << "good luck have fun)))'"  << "\n\n";
 
         if(game.isGameOver()) break; 
         game.draw();

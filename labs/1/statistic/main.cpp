@@ -8,65 +8,122 @@ using namespace std;
 
 int main() {
 
-    vector<int> v{34,23,8,93,21,77,34};
+    string str = "8 23 8 93 21 77 93";
 
-    cout << v[-3];
+    
+    vector<int> v;
+    char ch;
+    Statistic s(str);
 
-    //Statistic s("34 23 8 93 21 77 34");
-    /* Statistic s(v);
+    int ans;
 
-    // 34 23 8 93 21 77 34
+    char ch1;
+    int size;
+    int value;
 
-    cout << s.sum_sales() << endl;
-    cout << s.average_sales() << endl;
-    for(int x: s.max_sales()) cout << x << " ";
-    cout << endl;
-    for(int x: s.min_sales()) cout << x << " ";
-    cout << endl;
-    cout << s.months_sales_above_average() << endl;
-    cout << s.months_sales_below_average() << endl; */
+    while(ch1 != '1' && ch1 != '2') {
 
-    /* char ch;
+        system("cls");
 
-    cout << "1-sum\n2-average\n3-max sales\n4-min sales\n5-months sales below avg\n6 - months sales above avg\nEnter your choice: ";
+        cout << "what set of data you wanna use?\n\n1 - static data\n2 - your data set\n\n";
 
-    ch = _getch();
+        cout << "enter your choice: ";
+        ch1 = _getch();
+    }
 
-    cout << "\n\n\n"; */
+    system("cls");
 
-    /* switch (ch)
-    {
-    case '1':
-        cout << "sum: " << s.sum_sales();
-        break;
+    if (ch1 == '1')
 
-    case '2':
-        cout << "avg: " << s.average_sales();
-        break;
+        s = Statistic(str);
 
-    case '3':
-        v = s.max_sales();
-        cout << "max sales: ";
-        for (int x : v)
-            cout << x << " ";
-        break;
+    else {
 
-    case '4':
-        v = s.min_sales();
-        cout << "min sales: ";
-        for (int x : v)
-            cout << x << " ";
-        break;
+        cout << "enter size of data set: ";
+        cin >> size;
 
-    case '5':
-        cout << "months_sales_below_average: " << s.months_sales_below_average();
-        break;
+        for (size_t i = 0; i < size; ++i) {
 
-    case '6':
-        cout << "months_sales_below_average: " << s.months_sales_above_average();
-        break;
+            cin >> value;
+            v.push_back(value);
+        }
 
-    } */
+        s = Statistic(v);
+    }
+
+    v.clear();
+
+    int ll = 0;
+
+
+    while (ch != 'e') {
+
+        system("cls");
+
+        if (ll) {
+
+            cout << "answer: ";
+            if (v.size())
+            {
+
+                for (int x : v)
+                {
+
+                    cout << x << " ";
+                }
+            }
+
+            else
+                cout << ans;
+
+        }
+
+        v.clear();
+
+        s.out();
+
+        cout << "\n\nif you wanna exit press 'e'\n\n";
+
+        cout << "1 - sum\n2 - average\n3 - max sales\n4 - min sales\n5 - months sales below avg\n6 - months sales above avg\n\nEnter your choice: ";
+
+        ch = _getch();
+
+        cout << "\n\n\n"; 
+
+        switch (ch)
+        {
+        case '1':
+            ans = s.sum_sales();
+            break;
+
+        case '2':
+            ans = s.average_sales();
+            break;
+
+        case '3':
+            v = s.max_sales();
+            break;
+
+        case '4':
+            v = s.min_sales();
+            break;
+
+        case '5':
+            ans = s.months_sales_below_average();
+            break;
+
+        case '6':
+            ans = s.months_sales_above_average();
+            break;
+
+        }
+
+        ll = 1;
+        
+
+        
+
+    }
 
 
     return 0;

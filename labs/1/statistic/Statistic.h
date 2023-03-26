@@ -27,5 +27,7 @@ public:
     int months_sales_below_average() const;
     int months_sales_above_average() const;
 
+    void out();
+
 
 };
