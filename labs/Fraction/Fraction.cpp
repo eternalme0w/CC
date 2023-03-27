@@ -227,25 +227,23 @@ void Fraction::out() const {
     std::cout << numerator << "/" << denominator;
 }
 
-void frOut(const Fraction &fr) {
+//-------------------------in/out streams---------------------------------------------------------
 
-    std::cout << fr.numerator << "/" << fr.denominator;
+
+std::ostream& operator<< (std::ostream &out, const Fraction& fr) {
+
+    out << fr.numerator << "/" << fr.denominator;
+    return out;
 }
 
-Fraction frIn() {
+std::istream& operator>> (std::istream &in, Fraction& fr) {
 
     std::string s;
-    std::cout << "\nEnter fraction: ";
-    std::cin >> s;
+    in >> s;
+    fr = Fraction(s.c_str());
 
-    try {
- 
-        Fraction fr(s.c_str());
-        return  fr;
-
-    } catch(...) {
-
-        throw std::invalid_argument("Invalid input.");
-    }
+    return in;
 }
+
+
 

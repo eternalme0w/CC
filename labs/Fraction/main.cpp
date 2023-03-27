@@ -10,9 +10,10 @@ int main() {
 
     try {
 
-        Fraction fr = frIn();
+        Fraction fr;
 
-        fr.out();
+        cin >> fr;
+        cout << fr;
 
     } catch(invalid_argument &ex) {
 
