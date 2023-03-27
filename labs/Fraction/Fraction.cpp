@@ -12,9 +12,9 @@ Fraction::Fraction(int n, int d) {
     reduce();
 }
 
-Fraction::Fraction(const std::string s) {
+Fraction::Fraction(const char* str) {
 
-    
+    std::string s(str);
 
     std::string err = "The string must consist of two numbers separated by /\nFor example, 17/5";
 
@@ -137,33 +137,60 @@ Fraction operator* (const Fraction &a, const Fraction &b) {
     return copy;
 }
 
-Fraction Fraction::operator/ (const Fraction &fr) {
+Fraction operator/ (const Fraction &a, const Fraction &b) {
 
-    if (fr.numerator == 0) throw std::invalid_argument("Сan't divide by zero.");
+    if (b.getNumerator() == 0) throw std::invalid_argument("Erorr: divide by zero.");
 
-    Fraction copy = *this;
-    copy /= fr;
+    Fraction copy = a;
+    copy /= b;
     return copy;
 }
 
-Fraction Fraction::operator+ (const Fraction &fr) {
+Fraction operator+ (const Fraction &a, const Fraction &b) {
 
-    Fraction copy = *this;
-    copy += fr;
+    Fraction copy = a;
+    copy += b;
     return copy;
 }
 
-Fraction Fraction::operator- (const Fraction &fr) {
+Fraction operator- (const Fraction &a, const Fraction &b) {
 
-    Fraction copy = *this;
-    copy -= fr;
+    Fraction copy = a;
+    copy -= b;
     return copy;
 }
 
-bool Fraction::operator<(const Fraction &fr) {
+bool operator<(const Fraction &a, const Fraction &b) {
 
-    return numerator*fr.denominator < fr.numerator*denominator;
+    return ( a.getNumerator() * b.getDenominator() ) < ( b.getNumerator() * a.getDenominator() );
 }
+
+bool operator>(const Fraction &a, const Fraction &b) {
+
+    return b < a;
+}
+
+bool operator==(const Fraction &a, const Fraction &b) {
+
+    return !(a < b || a > b);
+}
+
+bool operator!=(const Fraction &a, const Fraction &b) {
+
+    return !(a == b);
+}
+
+bool operator<=(const Fraction &a, const Fraction &b) {
+
+    return (a == b || a < b);
+}
+
+bool operator>=(const Fraction &a, const Fraction &b) {
+
+    return (a == b || a > b);
+}
+
+
 
 Fraction Fraction::operator* (const int c) {
 

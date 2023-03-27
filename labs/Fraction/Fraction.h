@@ -14,25 +14,13 @@ public:
     
     Fraction(void);
     Fraction(const int, const int);
-    
-    Fraction(const std::string);
+
+    Fraction(const char*);
 
     Fraction& operator*= (const Fraction&);
     Fraction& operator/= (const Fraction&);
     Fraction& operator+= (const Fraction&);
     Fraction& operator-= (const Fraction&);
-
-    Fraction operator* (const Fraction&);
-    Fraction operator/ (const Fraction&);
-    Fraction operator+ (const Fraction&);
-    Fraction operator- (const Fraction&);
-
-    bool operator< (const Fraction&);
-    bool operator> (const Fraction&);
-    bool operator== (const Fraction&);
-    bool operator!= (const Fraction&);
-    bool operator>= (const Fraction&);
-    bool operator<= (const Fraction&);
 
     Fraction operator* (const int);
 
@@ -45,3 +33,15 @@ public:
     void out() const;
 
 };
+
+Fraction operator* (const Fraction &a, const Fraction &b);
+Fraction operator/ (const Fraction &a, const Fraction &b);
+Fraction operator+ (const Fraction &a, const Fraction &b);
+Fraction operator- (const Fraction &a, const Fraction &b);
+
+bool operator<(const Fraction &a, const Fraction &b);
+bool operator>(const Fraction &a, const Fraction &b);
+bool operator==(const Fraction &a, const Fraction &b);
+bool operator!=(const Fraction &a, const Fraction &b);
+bool operator<=(const Fraction &a, const Fraction &b);
+bool operator>=(const Fraction &a, const Fraction &b);

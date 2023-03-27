@@ -10,11 +10,13 @@ int main() {
 
     try {
 
-        Fraction fr1("4/2");
+        Fraction fr1("1/2");
         
-        Fraction f2 = "3/4" * fr1;
+        /* Fraction fr2 = "3/4" + fr1;
 
-        //fr1.out();
+        fr2.out(); */
+
+        cout << (fr1 == "2/4");
 
     } catch(invalid_argument &ex) {
 
