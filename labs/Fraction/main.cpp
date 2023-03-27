@@ -10,13 +10,11 @@ int main() {
 
     try {
 
-        Fraction fr1("7.2/2.4");
+        Fraction fr1("4/2");
         
-        /* Fraction fr2("5/4"); */
+        Fraction f2 = "3/4" * fr1;
 
-        /* Fraction fr3 = fr1 - fr2; */
-
-        fr1.out();
+        //fr1.out();
 
     } catch(invalid_argument &ex) {
 

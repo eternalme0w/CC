@@ -14,7 +14,8 @@ public:
     
     Fraction(void);
     Fraction(const int, const int);
-    Fraction(std::string);
+    
+    Fraction(const std::string);
 
     Fraction& operator*= (const Fraction&);
     Fraction& operator/= (const Fraction&);
@@ -25,6 +26,13 @@ public:
     Fraction operator/ (const Fraction&);
     Fraction operator+ (const Fraction&);
     Fraction operator- (const Fraction&);
+
+    bool operator< (const Fraction&);
+    bool operator> (const Fraction&);
+    bool operator== (const Fraction&);
+    bool operator!= (const Fraction&);
+    bool operator>= (const Fraction&);
+    bool operator<= (const Fraction&);
 
     Fraction operator* (const int);
 

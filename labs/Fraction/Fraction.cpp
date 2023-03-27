@@ -12,7 +12,9 @@ Fraction::Fraction(int n, int d) {
     reduce();
 }
 
-Fraction::Fraction(std::string s) {
+Fraction::Fraction(const std::string s) {
+
+    
 
     std::string err = "The string must consist of two numbers separated by /\nFor example, 17/5";
 
@@ -128,10 +130,10 @@ Fraction& Fraction::operator-= (const Fraction &fr) {
     return *this;
 }
 
-Fraction Fraction::operator* (const Fraction &fr) {
+Fraction operator* (const Fraction &a, const Fraction &b) {
 
-    Fraction copy = *this;
-    copy *= fr;
+    Fraction copy = a;
+    copy *= b;
     return copy;
 }
 
@@ -156,6 +158,11 @@ Fraction Fraction::operator- (const Fraction &fr) {
     Fraction copy = *this;
     copy -= fr;
     return copy;
+}
+
+bool Fraction::operator<(const Fraction &fr) {
+
+    return numerator*fr.denominator < fr.numerator*denominator;
 }
 
 Fraction Fraction::operator* (const int c) {
