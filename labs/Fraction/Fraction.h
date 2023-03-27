@@ -32,12 +32,18 @@ public:
 
     void out() const;
 
+    friend void frOut(const Fraction &fr);
+    friend Fraction frIn();
+
 };
 
 Fraction operator* (const Fraction &a, const Fraction &b);
 Fraction operator/ (const Fraction &a, const Fraction &b);
 Fraction operator+ (const Fraction &a, const Fraction &b);
 Fraction operator- (const Fraction &a, const Fraction &b);
+
+void frOut(const Fraction &fr);
+Fraction frIn();
 
 bool operator<(const Fraction &a, const Fraction &b);
 bool operator>(const Fraction &a, const Fraction &b);

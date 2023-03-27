@@ -227,3 +227,25 @@ void Fraction::out() const {
     std::cout << numerator << "/" << denominator;
 }
 
+void frOut(const Fraction &fr) {
+
+    std::cout << fr.numerator << "/" << fr.denominator;
+}
+
+Fraction frIn() {
+
+    std::string s;
+    std::cout << "\nEnter fraction: ";
+    std::cin >> s;
+
+    try {
+ 
+        Fraction fr(s.c_str());
+        return  fr;
+
+    } catch(...) {
+
+        throw std::invalid_argument("Invalid input.");
+    }
+}
+
