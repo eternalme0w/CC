@@ -4,6 +4,8 @@
 
 Fraction::Fraction(void): numerator(0), denominator(1) {};
 
+Fraction::Fraction(int c): numerator(c), denominator(1) {};
+
 Fraction::Fraction(int n, int d) {
 
     setNumerator(n);
@@ -39,8 +41,8 @@ Fraction::Fraction(const char* str) {
 
             try {
 
-                setNumerator(stoi(a));
-                setDenominator(stoi(b));
+                setNumerator(atoi(a.c_str()));
+                setDenominator(atoi(b.c_str()));
                 reduce();
 
             } catch(std::invalid_argument &ex) {
@@ -192,16 +194,6 @@ bool operator>=(const Fraction &a, const Fraction &b) {
 
 
 
-Fraction Fraction::operator* (const int c) {
-
-    Fraction copy = *this;
-    copy.setNumerator(copy.numerator * c);
-    return copy;
-}
-
-
-
-
 //---------------------------Utils---------------------------------------------------
 
 size_t Fraction::gcd(int a, int b) {
@@ -220,6 +212,43 @@ void Fraction::reduce() {
         numerator /= gcd;
         denominator /= gcd;
     }
+}
+
+int Fraction::binExp(int a, size_t e) {
+
+    int res = 1;
+
+    while (e) {
+
+        if (e & 1) res *= a;
+
+        a *= a;
+        e >>= 1;
+    }
+
+    return res;
+
+}
+
+void Fraction::pow(size_t e) {
+
+    setNumerator(binExp(numerator, e));
+    setDenominator(binExp(denominator, e));
+}
+
+Fraction Fraction::reciprocal() {
+
+    Fraction fr;
+
+    if (numerator == 0) return *this; 
+
+    else {
+
+        fr.numerator = numerator < 0 ? denominator * -1 : denominator;
+        fr.denominator = numerator < 0 ? numerator * -1 : numerator;
+    }
+    
+    return fr;
 }
 
 void Fraction::out() const {

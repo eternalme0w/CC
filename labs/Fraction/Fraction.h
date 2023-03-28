@@ -14,6 +14,7 @@ public:
     
     Fraction(void);
     Fraction(const int, const int);
+    Fraction(int c);
 
     Fraction(const char*);
 
@@ -22,13 +23,19 @@ public:
     Fraction& operator+= (const Fraction&);
     Fraction& operator-= (const Fraction&);
 
-    Fraction operator* (const int);
 
     int getNumerator() const;
     int getDenominator() const;
 
     void setNumerator(const int);
     void setDenominator(const int);
+
+    Fraction reciprocal();
+
+    int binExp(int, size_t);
+    void pow(size_t);
+
+    
 
     friend std::ostream& operator<< (std::ostream &out, const Fraction& fr);
     friend std::istream& operator>> (std::istream &in, Fraction& fr);
