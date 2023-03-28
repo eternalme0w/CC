@@ -10,9 +10,9 @@ int main() {
 
     try {
 
-        Fraction fr("0/2");
+        Fraction fr("-1/-2");
 
-        cout << (fr + "5/2");
+        cout << fr;
 
 
 

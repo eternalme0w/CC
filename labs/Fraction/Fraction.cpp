@@ -64,11 +64,18 @@ void Fraction::setNumerator(int n) {
 
 void Fraction::setDenominator(int d) {
 
-    if (d <= 0) {
+    if (d == 0) {
 
-        throw std::invalid_argument("The denominator must belong to natural numbers.");
+        throw std::invalid_argument("The denominator can not be zero.");
+    }
 
-    } else denominator = d;
+    else if (d < 0) {
+
+        setNumerator(-1 * numerator);
+        denominator = d * -1;
+    }
+
+    else denominator = d;
 }
 
 //----------------------------Geters-------------------------------------------------
