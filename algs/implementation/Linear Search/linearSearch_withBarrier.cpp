@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-size_t linearSearchWithBarrier(std::vector<int> mass, int x) {
+int linearSearchWithBarrier(std::vector<int> mass, int x) {
 
     size_t i = 0;
     mass.push_back(x);
@@ -14,7 +14,14 @@ size_t linearSearchWithBarrier(std::vector<int> mass, int x) {
 
 }
 
+
 int main() {
+
+    std::vector<int> a = {1, 2, 5, 7};
+
+    int ans = linearSearchWithBarrier(a, 7);
+
+    std::cout << ans;
 
     return 0;
 }
