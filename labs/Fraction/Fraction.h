@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <sstream>
 #include <algorithm>
 
 class Fraction {
@@ -11,6 +12,19 @@ class Fraction {
     void reduce();
 
 public:
+
+    explicit operator double() const {
+
+        double b = static_cast<double>(numerator) / denominator;
+        return b;
+    }
+    
+    explicit operator std::string() const {
+
+        std::stringstream ss;
+        ss << numerator << "/" << denominator;
+        return ss.str();
+    }
     
     Fraction(void);
     Fraction(const int, const int);
@@ -23,6 +37,8 @@ public:
     Fraction& operator+= (const Fraction&);
     Fraction& operator-= (const Fraction&);
 
+    Fraction operator-();
+
 
     int getNumerator() const;
     int getDenominator() const;
@@ -33,7 +49,9 @@ public:
     Fraction reciprocal();
 
     int binExp(int, size_t);
+
     void pow(size_t);
+    void pow(int);
 
     
 
@@ -64,3 +82,6 @@ bool operator>=(const Fraction &a, const Fraction &b);
 
 std::ostream& operator<< (std::ostream &out, const Fraction& fr);
 std::istream& operator>> (std::istream &in, Fraction& fr);
+
+//------------------------type casts---------------------------------------------
+

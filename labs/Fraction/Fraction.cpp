@@ -43,6 +43,7 @@ Fraction::Fraction(const char* str) {
 
                 setNumerator(atoi(a.c_str()));
                 setDenominator(atoi(b.c_str()));
+
                 reduce();
 
             } catch(std::invalid_argument &ex) {
@@ -199,6 +200,27 @@ bool operator>=(const Fraction &a, const Fraction &b) {
     return (a == b || a > b);
 }
 
+Fraction Fraction::operator-() {
+
+    Fraction copy = *this * -1;
+    return copy;
+}
+
+
+/* explicit Fraction::operator double() const  {
+
+    double b = static_cast<double>(numerator) / denominator;
+    return b;
+}
+
+explicit Fraction::operator std::string() const {
+
+    std::stringstream ss;
+    
+    ss << numerator << "/" << denominator;
+
+    return ss.str();
+} */
 
 
 //---------------------------Utils---------------------------------------------------
@@ -212,7 +234,7 @@ void Fraction::reduce() {
 
     int num = numerator >= 0 ? numerator : numerator * -1;
 
-    size_t gcd = this->gcd(num, denominator);
+    int gcd = this->gcd(num, denominator);  
 
     if (gcd != 1) {
 
@@ -241,6 +263,23 @@ void Fraction::pow(size_t e) {
 
     setNumerator(binExp(numerator, e));
     setDenominator(binExp(denominator, e));
+}
+
+void Fraction::pow(int e) {
+    
+    if (e == 0) {
+
+        setNumerator(1);
+        setDenominator(1);
+    } 
+    
+    else {
+
+        size_t t = e < 0 ? e * -1 : e;
+        pow(t);
+
+        if (e < 0) *this = this->reciprocal();
+    }
 }
 
 Fraction Fraction::reciprocal() {

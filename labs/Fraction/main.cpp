@@ -1,6 +1,4 @@
 #include "Fraction.h"
-#include <iostream>
-#include <algorithm>
 
 using namespace std;
 
@@ -8,11 +6,16 @@ using namespace std;
 
 int main() {
 
+    std::stringstream ss;
+
     try {
 
-        Fraction fr("-1/-2");
+        Fraction fr1("5/3");
 
-        cout << fr;
+        double x = (double)fr1;
+
+        cout << x;
+
 
 
 
