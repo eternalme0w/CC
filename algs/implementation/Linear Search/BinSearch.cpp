@@ -7,8 +7,7 @@ int binSearch(std::vector<int> mass, int x) {
     size_t l = mass.size() - 1;
     int m;
 
-
-    return -1;
+    
 
 }
 

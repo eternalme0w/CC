@@ -1,0 +1,8 @@
+[
+{
+  "directory": "D:/meow/CC/make/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\lab2.dir\\main.cpp.obj -c D:\\meow\\CC\\make\\main.cpp",
+  "file": "D:/meow/CC/make/main.cpp",
+  "output": "CMakeFiles/lab2.dir/main.cpp.obj"
+}
+]

@@ -1,0 +1,3 @@
+all:
+
+	g++ Property.cpp Appartment.cpp Car.cpp CountryHouse.cpp Owner.cpp main.cpp
