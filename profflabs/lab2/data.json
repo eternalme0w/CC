@@ -1,0 +1,66 @@
+[
+  {
+    "title": "The Shawshank Redemption",
+    "director": "Frank Darabont",
+    "year": 1994,
+    "country": "USA",
+    "genre": "Drama",
+    "duration": 142
+  },
+  {
+    "title": "The Godfather",
+    "director": "Francis Ford Coppola",
+    "year": 1972,
+    "country": "USA",
+    "genre": "Crime",
+    "duration": 175
+  },
+  {
+    "title": "Inception",
+    "director": "Christopher Nolan",
+    "year": 2010,
+    "country": "USA",
+    "genre": "Sci-Fi",
+    "duration": 148
+  },
+  {
+    "title": "Pulp Fiction",
+    "director": "Quentin Tarantino",
+    "year": 1994,
+    "country": "USA",
+    "genre": "Crime",
+    "duration": 154
+  },
+  {
+    "title": "The Dark Knight",
+    "director": "Christopher Nolan",
+    "year": 2008,
+    "country": "USA",
+    "genre": "Action",
+    "duration": 152
+  },
+  {
+    "title": "Fight Club",
+    "director": "David Fincher",
+    "year": 1999,
+    "country": "USA",
+    "genre": "Drama",
+    "duration": 139
+  },
+  {
+    "title": "The Matrix",
+    "director": "Lana Wachowski",
+    "year": 1999,
+    "country": "USA",
+    "genre": "Sci-Fi",
+    "duration": 136
+  },
+  {
+    "title": "Goodfellas",
+    "director": "Martin Scorsese",
+    "year": 1990,
+    "country": "USA",
+    "genre": "Crime",
+    "duration": 146
+  }
+]

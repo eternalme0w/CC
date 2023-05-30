@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<films>
+  <film>
+    <title>The Shawshank Redemption</title>
+    <director> Frank Darabont</director>
+    <year> 1994</year>
+    <country> USA</country>
+    <genre> Drama</genre>
+    <duration> 142</duration>
+  </film>
+  <film>
+    <title>The Godfather</title>
+    <director> Francis Ford Coppola</director>
+    <year> 1972</year>
+    <country> USA</country>
+    <genre> Crime</genre>
+    <duration> 175</duration>
+  </film>
+  <film>
+    <title>Inception</title>
+    <director> Christopher Nolan</director>
+    <year> 2010</year>
+    <country> USA</country>
+    <genre> Sci-Fi</genre>
+    <duration> 148</duration>
+  </film>
+  <film>
+    <title>Pulp Fiction</title>
+    <director> Quentin Tarantino</director>
+    <year> 1994</year>
+    <country> USA</country>
+    <genre> Crime</genre>
+    <duration> 154</duration>
+  </film>
+  <film>
+    <title>The Dark Knight</title>
+    <director> Christopher Nolan</director>
+    <year> 2008</year>
+    <country> USA</country>
+    <genre> Action</genre>
+    <duration> 152</duration>
+  </film>
+  <film>
+    <title>Fight Club</title>
+    <director> David Fincher</director>
+    <year> 1999</year>
+    <country> USA</country>
+    <genre> Drama</genre>
+    <duration> 139</duration>
+  </film>
+  <film>
+    <title>The Matrix</title>
+    <director> Lana Wachowski</director>
+    <year> 1999</year>
+    <country> USA</country>
+    <genre> Sci-Fi</genre>
+    <duration> 136</duration>
+  </film>
+  <film>
+    <title>Goodfellas</title>
+    <director> Martin Scorsese</director>
+    <year> 1990</year>
+    <country> USA</country>
+    <genre> Crime</genre>
+    <duration> 146</duration>
+  </film>
+</films>

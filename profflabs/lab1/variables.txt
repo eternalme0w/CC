@@ -1,0 +1,10 @@
+myvar
+my_var
+_my_var
+myVar
+m3yvar2
+2myvar
+my-var
+my var
+my+var
+!myvar
