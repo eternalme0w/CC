@@ -18,3 +18,4 @@ void Property::set_worth(double worth) {
 
     this->worth = worth;
 }
+

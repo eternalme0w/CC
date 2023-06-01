@@ -1,9 +1,114 @@
 ﻿  Appartment.cpp
   Car.cpp
   CountryHouse.cpp
+  Ijsonio.cpp
   main.cpp
+D:\meow\CC\VisualStudio\lab6\main.cpp(27,39): error C2259: "Appartment": невозможно создать экземпляр абстрактного класса
+D:\meow\CC\VisualStudio\lab6\Appartment.h(4,7): message : см. объявление "Appartment"
+D:\meow\CC\VisualStudio\lab6\main.cpp(27,39): message : из-за следующих членов:
+D:\meow\CC\VisualStudio\lab6\main.cpp(27,39): message : void Ijsonio::fromJson(const json &): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(12,15): message : см. объявление "Ijsonio::fromJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(27,39): message : json Ijsonio::toJson(void): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(13,15): message : см. объявление "Ijsonio::toJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(28,32): error C2259: "Car": невозможно создать экземпляр абстрактного класса
+D:\meow\CC\VisualStudio\lab6\Car.h(4,7): message : см. объявление "Car"
+D:\meow\CC\VisualStudio\lab6\main.cpp(28,32): message : из-за следующих членов:
+D:\meow\CC\VisualStudio\lab6\main.cpp(28,32): message : void Ijsonio::fromJson(const json &): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(12,15): message : см. объявление "Ijsonio::fromJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(28,32): message : json Ijsonio::toJson(void): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(13,15): message : см. объявление "Ijsonio::toJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(29,41): error C2259: "CountryHouse": невозможно создать экземпляр абстрактного класса
+D:\meow\CC\VisualStudio\lab6\CountryHouse.h(3,7): message : см. объявление "CountryHouse"
+D:\meow\CC\VisualStudio\lab6\main.cpp(29,41): message : из-за следующих членов:
+D:\meow\CC\VisualStudio\lab6\main.cpp(29,41): message : void Ijsonio::fromJson(const json &): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(12,15): message : см. объявление "Ijsonio::fromJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(29,41): message : json Ijsonio::toJson(void): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(13,15): message : см. объявление "Ijsonio::toJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(30,32): error C2259: "Car": невозможно создать экземпляр абстрактного класса
+D:\meow\CC\VisualStudio\lab6\Car.h(4,7): message : см. объявление "Car"
+D:\meow\CC\VisualStudio\lab6\main.cpp(30,32): message : из-за следующих членов:
+D:\meow\CC\VisualStudio\lab6\main.cpp(30,32): message : void Ijsonio::fromJson(const json &): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(12,15): message : см. объявление "Ijsonio::fromJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(30,32): message : json Ijsonio::toJson(void): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(13,15): message : см. объявление "Ijsonio::toJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(34,39): error C2259: "Appartment": невозможно создать экземпляр абстрактного класса
+D:\meow\CC\VisualStudio\lab6\Appartment.h(4,7): message : см. объявление "Appartment"
+D:\meow\CC\VisualStudio\lab6\main.cpp(34,39): message : из-за следующих членов:
+D:\meow\CC\VisualStudio\lab6\main.cpp(34,39): message : void Ijsonio::fromJson(const json &): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(12,15): message : см. объявление "Ijsonio::fromJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(34,39): message : json Ijsonio::toJson(void): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(13,15): message : см. объявление "Ijsonio::toJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(35,32): error C2259: "Car": невозможно создать экземпляр абстрактного класса
+D:\meow\CC\VisualStudio\lab6\Car.h(4,7): message : см. объявление "Car"
+D:\meow\CC\VisualStudio\lab6\main.cpp(35,32): message : из-за следующих членов:
+D:\meow\CC\VisualStudio\lab6\main.cpp(35,32): message : void Ijsonio::fromJson(const json &): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(12,15): message : см. объявление "Ijsonio::fromJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(35,32): message : json Ijsonio::toJson(void): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(13,15): message : см. объявление "Ijsonio::toJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(36,41): error C2259: "CountryHouse": невозможно создать экземпляр абстрактного класса
+D:\meow\CC\VisualStudio\lab6\CountryHouse.h(3,7): message : см. объявление "CountryHouse"
+D:\meow\CC\VisualStudio\lab6\main.cpp(36,41): message : из-за следующих членов:
+D:\meow\CC\VisualStudio\lab6\main.cpp(36,41): message : void Ijsonio::fromJson(const json &): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(12,15): message : см. объявление "Ijsonio::fromJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(36,41): message : json Ijsonio::toJson(void): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(13,15): message : см. объявление "Ijsonio::toJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(37,41): error C2259: "CountryHouse": невозможно создать экземпляр абстрактного класса
+D:\meow\CC\VisualStudio\lab6\CountryHouse.h(3,7): message : см. объявление "CountryHouse"
+D:\meow\CC\VisualStudio\lab6\main.cpp(37,41): message : из-за следующих членов:
+D:\meow\CC\VisualStudio\lab6\main.cpp(37,41): message : void Ijsonio::fromJson(const json &): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(12,15): message : см. объявление "Ijsonio::fromJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(37,41): message : json Ijsonio::toJson(void): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(13,15): message : см. объявление "Ijsonio::toJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(41,39): error C2259: "Appartment": невозможно создать экземпляр абстрактного класса
+D:\meow\CC\VisualStudio\lab6\Appartment.h(4,7): message : см. объявление "Appartment"
+D:\meow\CC\VisualStudio\lab6\main.cpp(41,39): message : из-за следующих членов:
+D:\meow\CC\VisualStudio\lab6\main.cpp(41,39): message : void Ijsonio::fromJson(const json &): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(12,15): message : см. объявление "Ijsonio::fromJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(41,39): message : json Ijsonio::toJson(void): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(13,15): message : см. объявление "Ijsonio::toJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(42,32): error C2259: "Car": невозможно создать экземпляр абстрактного класса
+D:\meow\CC\VisualStudio\lab6\Car.h(4,7): message : см. объявление "Car"
+D:\meow\CC\VisualStudio\lab6\main.cpp(42,32): message : из-за следующих членов:
+D:\meow\CC\VisualStudio\lab6\main.cpp(42,32): message : void Ijsonio::fromJson(const json &): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(12,15): message : см. объявление "Ijsonio::fromJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(42,32): message : json Ijsonio::toJson(void): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(13,15): message : см. объявление "Ijsonio::toJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(43,41): error C2259: "CountryHouse": невозможно создать экземпляр абстрактного класса
+D:\meow\CC\VisualStudio\lab6\CountryHouse.h(3,7): message : см. объявление "CountryHouse"
+D:\meow\CC\VisualStudio\lab6\main.cpp(43,41): message : из-за следующих членов:
+D:\meow\CC\VisualStudio\lab6\main.cpp(43,41): message : void Ijsonio::fromJson(const json &): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(12,15): message : см. объявление "Ijsonio::fromJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(43,41): message : json Ijsonio::toJson(void): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(13,15): message : см. объявление "Ijsonio::toJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(44,39): error C2259: "Appartment": невозможно создать экземпляр абстрактного класса
+D:\meow\CC\VisualStudio\lab6\Appartment.h(4,7): message : см. объявление "Appartment"
+D:\meow\CC\VisualStudio\lab6\main.cpp(44,39): message : из-за следующих членов:
+D:\meow\CC\VisualStudio\lab6\main.cpp(44,39): message : void Ijsonio::fromJson(const json &): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(12,15): message : см. объявление "Ijsonio::fromJson"
+D:\meow\CC\VisualStudio\lab6\main.cpp(44,39): message : json Ijsonio::toJson(void): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(13,15): message : см. объявление "Ijsonio::toJson"
   Owner.cpp
   OwnerManager.cpp
+D:\meow\CC\VisualStudio\lab6\OwnerManager.cpp(180,34): error C2259: "Appartment": невозможно создать экземпляр абстрактного класса
+D:\meow\CC\VisualStudio\lab6\Appartment.h(4,7): message : см. объявление "Appartment"
+D:\meow\CC\VisualStudio\lab6\OwnerManager.cpp(180,34): message : из-за следующих членов:
+D:\meow\CC\VisualStudio\lab6\OwnerManager.cpp(180,34): message : void Ijsonio::fromJson(const json &): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(12,15): message : см. объявление "Ijsonio::fromJson"
+D:\meow\CC\VisualStudio\lab6\OwnerManager.cpp(180,34): message : json Ijsonio::toJson(void): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(13,15): message : см. объявление "Ijsonio::toJson"
+D:\meow\CC\VisualStudio\lab6\OwnerManager.cpp(186,27): error C2259: "Car": невозможно создать экземпляр абстрактного класса
+D:\meow\CC\VisualStudio\lab6\Car.h(4,7): message : см. объявление "Car"
+D:\meow\CC\VisualStudio\lab6\OwnerManager.cpp(186,27): message : из-за следующих членов:
+D:\meow\CC\VisualStudio\lab6\OwnerManager.cpp(186,27): message : void Ijsonio::fromJson(const json &): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(12,15): message : см. объявление "Ijsonio::fromJson"
+D:\meow\CC\VisualStudio\lab6\OwnerManager.cpp(186,27): message : json Ijsonio::toJson(void): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(13,15): message : см. объявление "Ijsonio::toJson"
+D:\meow\CC\VisualStudio\lab6\OwnerManager.cpp(192,36): error C2259: "CountryHouse": невозможно создать экземпляр абстрактного класса
+D:\meow\CC\VisualStudio\lab6\CountryHouse.h(3,7): message : см. объявление "CountryHouse"
+D:\meow\CC\VisualStudio\lab6\OwnerManager.cpp(192,36): message : из-за следующих членов:
+D:\meow\CC\VisualStudio\lab6\OwnerManager.cpp(192,36): message : void Ijsonio::fromJson(const json &): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(12,15): message : см. объявление "Ijsonio::fromJson"
+D:\meow\CC\VisualStudio\lab6\OwnerManager.cpp(192,36): message : json Ijsonio::toJson(void): абстрактный
+D:\meow\CC\VisualStudio\lab6\Ijsonio.h(13,15): message : см. объявление "Ijsonio::toJson"
   Property.cpp
   Создание кода...
-  lab6.vcxproj -> D:\meow\VisualStudio\lab6\x64\Debug\lab6.exe

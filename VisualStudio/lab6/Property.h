@@ -1,10 +1,10 @@
 #pragma once
 #include "TAX_RATES.h"
-
+#include "Ijsonio.h"
 #include <iostream>
 
 
-class Property {
+class Property : public Ijsonio {
 
 protected:
 
@@ -22,5 +22,8 @@ public:
     void set_worth(double);
 
     virtual void out() const =  0;
+
+    Property() = default;
+
 };
 

@@ -1,1 +1,2 @@
 D:\meow\VisualStudio\lab6\x64\Debug\lab6.exe
+D:\meow\CC\VisualStudio\lab6\x64\Debug\lab6.exe

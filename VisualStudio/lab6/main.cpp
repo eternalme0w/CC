@@ -8,7 +8,7 @@
 #include "OwnerManager.h"
 #include <iomanip>
 
-#include "deps\include\nlohmann\json.hpp"
+
 
 using namespace std;
 
@@ -17,8 +17,8 @@ using namespace std;
 
 
 
-int main()
-{
+int main() {
+
     std::vector<Owner> owners;
     OwnerManager ownerManager;
     

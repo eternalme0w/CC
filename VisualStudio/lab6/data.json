@@ -1,0 +1,14 @@
+{
+  "fullname": "John Doe",
+  "inn": "12345231012",
+  "properties": [
+    {
+      "Appartment": {
+        "square": 50,
+        "worth": 10203
+      }
+    }
+  ]
+
+
+}
