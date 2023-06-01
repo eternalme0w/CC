@@ -10,27 +10,12 @@ Film::Film(std::string title, std::string director, int year, std::string countr
     this->duration = duration;
 }
 
-// Геттеры для доступа к полям класса
-std::string Film::getTitle() const {
-    return title;
-}
+Film::Film(const json &obj) {
 
-std::string Film::getDirector() const {
-    return director;
-}
-
-int Film::getYear() const {
-    return year;
-}
-
-std::string Film::getCountry() const {
-    return country;
-}
-
-std::string Film::getGenre() const {
-    return genre;
-}
-
-int Film::getDuration() const {
-    return duration;
+    title = obj["title"];
+    director = obj["director"];
+    year = obj["year"];
+    country = obj["country"];
+    genre = obj["genre"];
+    duration = obj["duration"];
 }

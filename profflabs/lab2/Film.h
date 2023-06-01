@@ -1,9 +1,11 @@
 #pragma once
 #include <string>
+#include <iostream>
+#include <nlohmann/json.hpp>
+
+using json = nlohmann::json;
 
 class Film {
-
-    
 
 public:
 
@@ -15,16 +17,15 @@ public:
     int duration;
 
     Film() = default;
+    ~Film() {
+
+        std::cout << "destructor\n";
+    }
+    Film(const json &);
     
 
     Film(std::string title, std::string director, int year, std::string country, std::string genre, int duration);
 
     
-    std::string getTitle() const;
-    std::string getDirector() const;
-    int getYear() const;
-    std::string getCountry() const;
-    std::string getGenre() const;
-    int getDuration() const;
 
 };
